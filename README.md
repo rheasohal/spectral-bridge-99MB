@@ -15,9 +15,9 @@ Our Round 1 submission used **Barycentric Interpolation** -- fitting a polynomia
 Real audio is **non-stationary**. A bass guitar has slow, periodic oscillations with gradual decay. A cymbal crash is high-frequency chaos. A synthesizer drone is perfectly periodic and harmonic. A good model must *infer which kind of signal it is looking at* before predicting the gaps.
 
 
-# Our Round 2 Solution — Transformer Neural Process
+# Our Round 2 Solution -- Transformer Neural Process
 
-We train a **single Transformer model** on all 80,000 training samples. During training, it learns what different audio signals look like — their shapes, periodicities, decay patterns, harmonic structures. At inference time, it uses this learned knowledge to fill gaps in any new sample in a **single forward pass**.
+We train a **single Transformer model** on all 80,000 training samples. During training, it learns what different audio signals look like their shapes, periodicities, decay patterns, harmonic structures. At inference time, it uses this learned knowledge to fill gaps in any new sample in a **single forward pass**.
 
 This approach is called **Amortized Inference** --- exactly what the problem brief requires. No per-sample optimization loops. One model, one pass, done.
 
