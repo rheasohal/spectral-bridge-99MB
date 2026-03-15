@@ -6,7 +6,7 @@
 
 # Why Simple Interpolation Fails
 
-Our Round 1 submission used **Barycentric Interpolation** — fitting a polynomial curve through the known context points. This has a fundamental flaw:
+Our Round 1 submission used **Barycentric Interpolation** -- fitting a polynomial curve through the known context points. This has a fundamental flaw:
 
 - It treats every signal identically --- a drum hit the same as a flute note
 - It has no understanding of audio physics (harmonics, decay, periodicity)
